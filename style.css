@@ -1,0 +1,651 @@
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: roboto-light;
+  src: url("font/Roboto-Light.ttf"); }
+@font-face {
+  font-family: poison;
+  src: url("font/Poison-Regular.ttf"); }
+@font-face {
+  font-family: jannscript;
+  src: url("font/jannscript.ttf"); }
+@font-face {
+  font-family: saira;
+  src: url("font/Saira-Regular.otf"); }
+@font-face {
+  font-family: saira-light;
+  src: url("font/Saira-Light.otf"); }
+@font-face {
+  font-family: sensation;
+  src: url("font/Sensation_Regular.ttf"); }
+@font-face {
+  font-family: sensation-light;
+  src: url("font/Light.ttf"); }
+@font-face {
+  font-family: winter;
+  src: url("font/Winter Poppins .ttf"); }
+@font-face {
+  font-family: righteous;
+  src: url("font/Righteous-Regular.ttf"); }
+@font-face {
+  font-family: patrickhandsc;
+  src: url("font/PatrickHandSC-Regular.ttf"); }
+@font-face {
+  font-family: rage;
+  src: url("font/RAGE.TTF"); }
+@font-face {
+  font-family: daylove;
+  src: url("font/Daylove_DEMO.ttf"); }
+@font-face {
+  font-family: makeanything;
+  src: url("font/Make Anything.ttf"); }
+@font-face {
+  font-family: conseration;
+  src: url("font/Conseration-Regular.ttf"); }
+@font-face {
+  font-family: dahlia;
+  src: url("font/Smooth Dahlia.ttf"); }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+:root {
+  --biru:#303F55; }
+
+body {
+  width: 100%;
+  height: 100%; }
+  body .kontainer {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background: #E7F5F5;
+    z-index: 0;
+    position: relative; }
+    body .kontainer header {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      background: url("img/header5.png") no-repeat center;
+      background-size: cover;
+      z-index: 2; }
+      body .kontainer header .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        line-height: 8vh;
+        z-index: 4;
+        justify-content: center;
+        transition: .3s;
+        display: none; }
+        @media only screen and (max-width: 500px) {
+          body .kontainer header .sidebar {
+            display: flex; } }
+        body .kontainer header .sidebar .option {
+          position: absolute;
+          top: 50%;
+          right: 2vw;
+          transform: translateY(-50%);
+          width: 30px;
+          height: 30px;
+          cursor: pointer; }
+          body .kontainer header .sidebar .option span {
+            width: 100%;
+            height: 3px;
+            background: white;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: .5s; }
+          body .kontainer header .sidebar .option span:nth-child(2) {
+            margin-top: -2.5px;
+            transform: rotateZ(90deg); }
+        body .kontainer header .sidebar .menu {
+          position: fixed;
+          top: 10.5vh;
+          right: -40vw;
+          width: 40vw;
+          height: 100vh;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          padding-top: 10vh;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          transition: .5s; }
+          body .kontainer header .sidebar .menu span {
+            color: black;
+            text-decoration: none;
+            display: block;
+            font-family: poison;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            width: 100%;
+            padding: 15px 0;
+            transition: .2s;
+            cursor: pointer; }
+            body .kontainer header .sidebar .menu span:hover {
+              background: var(--biru);
+              color: white; }
+      body .kontainer header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        line-height: 8vh;
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        transition: .3s; }
+        @media only screen and (max-width: 500px) {
+          body .kontainer header nav {
+            display: none; } }
+        body .kontainer header nav > .nav-btn {
+          padding: 0 20px;
+          font-size: clamp(0.8rem, 3vw, 1.2rem);
+          font-family: poison;
+          color: white;
+          cursor: pointer;
+          transform: scale(1);
+          letter-spacing: 2px;
+          transition: .3s ease-in-out; }
+          body .kontainer header nav > .nav-btn:hover {
+            transform: scale(1.2); }
+      body .kontainer header .sticky {
+        background: var(--biru);
+        z-index: 4;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); }
+      body .kontainer header .sticky2 {
+        background: var(--biru);
+        z-index: 4;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); }
+      body .kontainer header .intro {
+        position: relative;
+        padding-top: 10vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 1;
+        color: white; }
+        @media only screen and (max-width: 500px) {
+          body .kontainer header .intro {
+            flex-direction: column; } }
+        body .kontainer header .intro .kiri {
+          position: relative;
+          width: 50%;
+          height: 100%; }
+          @media only screen and (max-width: 730px) {
+            body .kontainer header .intro .kiri {
+              width: 70%; } }
+          @media only screen and (max-width: 500px) {
+            body .kontainer header .intro .kiri {
+              width: 100%; } }
+          body .kontainer header .intro .kiri .brand {
+            width: clamp(300px, 50%, 50%);
+            height: auto;
+            margin: 0 auto;
+            padding-top: 5vh;
+            position: relative; }
+            body .kontainer header .intro .kiri .brand h2 {
+              font-family: roboto;
+              font-size: clamp(2rem, 4vw, 3rem);
+              font-weight: normal; }
+            body .kontainer header .intro .kiri .brand p {
+              font-size: clamp(0.8rem, 2vw, 1rem);
+              font-family: roboto-light;
+              margin: 10px 0;
+              letter-spacing: 1px; }
+            body .kontainer header .intro .kiri .brand button {
+              position: relative;
+              padding: 8px 15px;
+              outline: none;
+              border: 2px solid #2A7B9E;
+              background: transparent;
+              border-radius: 10px;
+              color: white;
+              float: right;
+              margin-top: 10px;
+              cursor: pointer;
+              transform: scale(1);
+              transition: .2s ease-in-out;
+              font-size: clamp(0.6rem, 2vw, 1rem);
+              z-index: 1;
+              overflow: hidden;
+              letter-spacing: 1px; }
+              body .kontainer header .intro .kiri .brand button:active {
+                transform: scale(0.95); }
+              body .kontainer header .intro .kiri .brand button:hover::before {
+                top: calc(100%); }
+            body .kontainer header .intro .kiri .brand button::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: #2A7B9E;
+              z-index: -1;
+              transition: .3s; }
+        body .kontainer header .intro .kanan {
+          width: 50%;
+          height: 100%;
+          position: relative; }
+          @media only screen and (max-width: 730px) {
+            body .kontainer header .intro .kanan {
+              width: 30%; } }
+          @media only screen and (max-width: 500px) {
+            body .kontainer header .intro .kanan {
+              width: 100%; } }
+          body .kontainer header .intro .kanan .sosmed {
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            width: auto;
+            height: auto;
+            text-align: center; }
+            body .kontainer header .intro .kanan .sosmed h2 {
+              color: white;
+              margin-bottom: 5px;
+              font-family: roboto;
+              font-weight: normal;
+              font-size: clamp(10px, 2vw, 1rem); }
+            body .kontainer header .intro .kanan .sosmed .icon {
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              body .kontainer header .intro .kanan .sosmed .icon img {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                margin: 0 5px;
+                transform: scale(1);
+                transition: .2s ease-in-out;
+                cursor: pointer; }
+                body .kontainer header .intro .kanan .sosmed .icon img:hover {
+                  transform: scale(1.2); }
+      body .kontainer header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45); }
+    body .kontainer main {
+      width: 100%;
+      min-height: 100vh;
+      height: 100%;
+      position: relative;
+      padding-top: 10vh;
+      z-index: 1; }
+      body .kontainer main .about {
+        width: 100%;
+        min-height: 100vh;
+        height: 100%; }
+        body .kontainer main .about h2 {
+          display: inline;
+          padding: 10px 30px;
+          background: var(--biru);
+          color: white;
+          letter-spacing: 3px;
+          font-family: roboto;
+          font-size: clamp(0.9rem, 3vw, 1.6rem); }
+        body .kontainer main .about .havin {
+          width: 100%;
+          height: auto;
+          margin: 10vh 0;
+          margin-left: -20px;
+          display: flex; }
+          @media only screen and (max-width: 500px) {
+            body .kontainer main .about .havin {
+              flex-direction: column;
+              margin-left: 0;
+              align-items: center; } }
+          body .kontainer main .about .havin img {
+            width: clamp(280px, 40vw, 800px);
+            height: auto;
+            opacity: 0;
+            transition: .6s;
+            transform: translateY(100px); }
+            @media only screen and (max-width: 500px) {
+              body .kontainer main .about .havin img {
+                width: 80%; } }
+          body .kontainer main .about .havin .havin-info {
+            display: flex;
+            width: clamp(250px, 35%, 35%);
+            height: 200px;
+            padding: 20px;
+            align-self: center;
+            place-items: center;
+            background: white;
+            margin-left: -50px;
+            z-index: 1;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            transition: .4s;
+            transition-delay: .5s;
+            transform: scale(0); }
+            @media only screen and (max-width: 500px) {
+              body .kontainer main .about .havin .havin-info {
+                width: 60%;
+                height: 150px;
+                margin-left: 0;
+                margin-top: -50px; } }
+            body .kontainer main .about .havin .havin-info p {
+              font-family: poison;
+              font-size: clamp(0.8rem, 2vw, 1.2rem); }
+        body .kontainer main .about .kopi {
+          width: 100%;
+          height: auto;
+          margin: 20vh 0 10vh 0;
+          display: flex;
+          flex-direction: row-reverse; }
+          @media only screen and (max-width: 500px) {
+            body .kontainer main .about .kopi {
+              flex-direction: column;
+              margin-left: 0;
+              align-items: center; } }
+          body .kontainer main .about .kopi img {
+            width: clamp(280px, 40vw, 800px);
+            height: auto;
+            opacity: 0;
+            transition: .6s;
+            transform: translateY(100px); }
+            @media only screen and (max-width: 500px) {
+              body .kontainer main .about .kopi img {
+                width: 80%; } }
+          body .kontainer main .about .kopi .kopi-info {
+            display: flex;
+            position: relative;
+            width: clamp(250px, 35%, 35%);
+            height: 200px;
+            padding: 20px;
+            align-self: center;
+            place-items: center;
+            background: white;
+            margin-right: -50px;
+            z-index: 1;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            transition: .4s;
+            transition-delay: .5s;
+            transform: scale(0); }
+            @media only screen and (max-width: 500px) {
+              body .kontainer main .about .kopi .kopi-info {
+                width: 60%;
+                height: 150px;
+                margin-right: 0;
+                margin-top: -50px; } }
+            body .kontainer main .about .kopi .kopi-info p {
+              font-family: poison;
+              font-size: clamp(0.9rem, 2vw, 1.2rem); }
+            body .kontainer main .about .kopi .kopi-info > img {
+              width: 30px;
+              height: 30px;
+              position: absolute;
+              bottom: 10px;
+              right: 10px; }
+      body .kontainer main .project {
+        width: 100%;
+        height: 100%;
+        padding: 0 4vw; }
+        body .kontainer main .project .skill {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          place-items: center;
+          text-align: center;
+          font-family: roboto;
+          margin: 5vh 0; }
+          body .kontainer main .project .skill h2 {
+            font-size: clamp(0.9rem, 3vw, 1.6rem);
+            display: inline-block;
+            padding: 10px 30px;
+            background: var(--biru);
+            color: white;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            cursor: pointer; }
+          body .kontainer main .project .skill .skill-icon {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 5vh; }
+            body .kontainer main .project .skill .skill-icon .box {
+              width: clamp(200px, 250px, 300px);
+              height: clamp(150px, 200px, 200px);
+              border-radius: 10px;
+              margin: 10px;
+              transition: .5s;
+              transform: scale(0.5); }
+            body .kontainer main .project .skill .skill-icon .html {
+              background: url("img/html.png") no-repeat center;
+              background-size: cover; }
+            body .kontainer main .project .skill .skill-icon .css {
+              background: url("img/css.png") no-repeat center;
+              background-size: cover; }
+            body .kontainer main .project .skill .skill-icon .js {
+              background: url("img/js.png") no-repeat center;
+              background-size: cover; }
+            body .kontainer main .project .skill .skill-icon .sass {
+              background: url("img/sass.png") no-repeat center;
+              background-size: cover; }
+        body .kontainer main .project aside {
+          width: 100%;
+          height: 100%;
+          background: var(--biru);
+          margin: 5vh 0;
+          border-radius: 20px;
+          padding: 20px;
+          display: flex; }
+          @media only screen and (max-width: 730px) {
+            body .kontainer main .project aside {
+              flex-direction: column;
+              align-items: center; } }
+          body .kontainer main .project aside .women-gallery {
+            width: 60%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative; }
+            @media only screen and (max-width: 730px) {
+              body .kontainer main .project aside .women-gallery {
+                width: 80%; } }
+            body .kontainer main .project aside .women-gallery img {
+              width: 100%;
+              height: auto;
+              transform: scale(1);
+              transition: .5s ease-in-out; }
+            body .kontainer main .project aside .women-gallery .link {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.6);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 0; }
+              body .kontainer main .project aside .women-gallery .link #btn-wg {
+                outline: none;
+                border: none;
+                padding: 10px 30px;
+                transform: scale(1);
+                cursor: pointer;
+                transition: .3s;
+                background: #2A7B9E;
+                color: white;
+                font-family: roboto;
+                letter-spacing: 2px;
+                border-radius: 10px; }
+                body .kontainer main .project aside .women-gallery .link #btn-wg:active {
+                  transform: scale(0.95); }
+@keyframes animate {
+  30% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+          body .kontainer main .project aside .women-gallery:hover > .link {
+            animation: animate .6s linear;
+            animation-fill-mode: forwards; }
+          body .kontainer main .project aside .women-gallery:hover img {
+            transform: scale(1.2); }
+          body .kontainer main .project aside article {
+            width: 40%;
+            height: auto;
+            margin-left: 10px;
+            background: white;
+            padding: 20px; }
+            @media only screen and (max-width: 730px) {
+              body .kontainer main .project aside article {
+                width: 80%;
+                margin-left: 0;
+                margin-top: 20px; } }
+            body .kontainer main .project aside article h4, body .kontainer main .project aside article p {
+              margin: 0 2vw; }
+            body .kontainer main .project aside article h4 {
+              padding: 10px 20px;
+              background: var(--biru);
+              color: white;
+              text-align: center;
+              font-family: poison;
+              letter-spacing: 5px;
+              font-size: clamp(0.7rem, 2vw, 1.5rem); }
+            body .kontainer main .project aside article p {
+              margin-top: 5vh;
+              text-align: justify;
+              font-size: clamp(0.8rem, 2vw, 1rem); }
+    body .kontainer .contact {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: var(--biru);
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      z-index: 1; }
+      @media only screen and (max-width: 500px) {
+        body .kontainer .contact {
+          flex-direction: column-reverse; } }
+      body .kontainer .contact .instagram {
+        width: 40%;
+        display: flex;
+        justify-content: center; }
+        @media only screen and (max-width: 500px) {
+          body .kontainer .contact .instagram {
+            width: 90%; } }
+        body .kontainer .contact .instagram .tampung {
+          width: 50%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body .kontainer .contact .instagram .tampung h2 {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            font-family: roboto;
+            letter-spacing: 5px;
+            text-align: center;
+            width: 100%;
+            color: white;
+            margin-bottom: 5vh; }
+          body .kontainer .contact .instagram .tampung img {
+            width: clamp(120px, 70%, 70%);
+            height: auto; }
+      body .kontainer .contact .message {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        @media only screen and (max-width: 500px) {
+          body .kontainer .contact .message {
+            width: 90%; } }
+        body .kontainer .contact .message .tampung-message {
+          position: relative;
+          padding: 10px;
+          font-family: poison; }
+          body .kontainer .contact .message .tampung-message .message-content {
+            position: relative;
+            width: 100%;
+            height: auto;
+            color: white;
+            display: grid;
+            padding: 5px;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr); }
+            body .kontainer .contact .message .tampung-message .message-content textarea {
+              resize: none;
+              height: 20vh;
+              min-height: 40px;
+              width: 100%;
+              margin: 5px 0;
+              padding: 10px 5px;
+              border-radius: 5px;
+              border: none;
+              outline: none; }
+            body .kontainer .contact .message .tampung-message .message-content label {
+              padding: 5px; }
+            body .kontainer .contact .message .tampung-message .message-content input[type="text"], body .kontainer .contact .message .tampung-message .message-content input[type="email"] {
+              height: 6vh;
+              min-height: 20px;
+              width: 100%;
+              margin: 5px 0;
+              padding: 10px 5px;
+              border-radius: 5px;
+              border: none;
+              outline: none; }
+            body .kontainer .contact .message .tampung-message .message-content .pesan {
+              grid-column: 1/3; }
+        body .kontainer .contact .message .btn-kirim {
+          padding: 5px 20px;
+          margin: 10px 0;
+          float: right;
+          outline: none;
+          border: 2px solid white;
+          color: white;
+          background: transparent;
+          cursor: pointer;
+          transform: scale(1);
+          transition: .2s; }
+          body .kontainer .contact .message .btn-kirim:active {
+            transform: scale(0.95); }
+    body .kontainer footer {
+      position: relative;
+      text-align: center;
+      background: #CD6133;
+      padding: 10px 0;
+      z-index: 1;
+      color: white;
+      letter-spacing: 1px;
+      font-family: poison; }
+      body .kontainer footer #coffee {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("img/kopi.png") no-repeat center;
+        background-size: cover;
+        margin: 0 5px; }
+  body .kontainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("img/bg.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: .4; }
+
+/*# sourceMappingURL=style.css.map */
